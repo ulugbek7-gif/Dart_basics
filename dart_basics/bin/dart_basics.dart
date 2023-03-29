@@ -1,6 +1,8 @@
 import 'package:dart_basics/task1.dart';
 import 'package:dart_basics/task1part2.dart';
 import 'package:dart_basics/task2.dart';
+import 'package:dart_basics/task3.dart';
+
 void main() {
   var gcd = DelimetersCalculator();
   int a = 50;
@@ -16,4 +18,8 @@ void main() {
   int g = 10;
   print(finding.dcm(g));
   print(finding.mcd(g));
+
+  var findnumbers = Numbers();
+  List<dynamic> list = [1, "two", 3, "four", 5];
+  print(findnumbers.numbers());
 }
