@@ -19,7 +19,7 @@ void main() {
   print(finding.dcm(g));
   print(finding.mcd(g));
 
-  var findnumbers = PrintNumbers();
+  var method = PrintNumbers();
   List<dynamic> text = [22, "миллион", 556, "магазин", 5];
-  print(findnumbers.methods(text));
+  print(method.printnumber(text));
 }
