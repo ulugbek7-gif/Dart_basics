@@ -3,10 +3,9 @@ class DecimalNumber {
     String binaryNumber = g.toRadixString(2);
     return binaryNumber;
   }
-  int mcd (int g){
-    String binaryNumber = g.toRadixString(2);
+
+  int mcd(String binaryNumber) {
     int bmc = int.parse(binaryNumber, radix: 2);
     return bmc;
   }
 }
-
