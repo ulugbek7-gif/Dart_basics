@@ -25,4 +25,9 @@ void main() {
   var method = PrintNumbers();
   List<dynamic> text = [22, "миллион", 556, "магазин", 5];
   print(method.printnumber(text));
+
+  var countingWords = CountWords();
+  List<String> words = ['hello', 'world', 'helli'];
+  Map<String, int> wordcounts = countingWords.countsWords(words);
+  print(wordcounts);
 }
