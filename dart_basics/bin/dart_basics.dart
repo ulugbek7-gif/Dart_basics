@@ -3,6 +3,7 @@ import 'package:dart_basics/task1part2.dart';
 import 'package:dart_basics/task2.dart';
 import 'package:dart_basics/task3.dart';
 import 'package:dart_basics/task4.dart';
+import 'package:dart_basics/task5.dart';
 
 void main() {
   var gcd = DelimetersCalculator();
@@ -30,4 +31,9 @@ void main() {
   List<String> words = ['hello', 'world', 'helli'];
   Map<String, int> wordcounts = countingWords.countsWords(words);
   print(wordcounts);
+
+  var finddigits = FindNumbres();
+  String numbers = 'one, two, zero, zero';
+  Set<int> uniqueDigits = finddigits.findingnumbers(numbers);
+  print(uniqueDigits);
 }
