@@ -4,6 +4,7 @@ import 'package:dart_basics/task2.dart';
 import 'package:dart_basics/task3.dart';
 import 'package:dart_basics/task4.dart';
 import 'package:dart_basics/task5.dart';
+import 'package:dart_basics/task6.dart';
 
 void main() {
   var gcd = DelimetersCalculator();
@@ -33,7 +34,12 @@ void main() {
   print(wordcounts);
 
   var finddigits = FindNumbres();
-  String numbers = 'one, two, zero, zero';
+  String numbers = 'one, two, zero, zero, cat, dog, nine';
   Set<int> uniqueDigits = finddigits.findingnumbers(numbers);
   print(uniqueDigits);
+
+  var p1 = Point(0, 0, 0);
+  var p2 = Point(1, 1, 1);
+  double distance = p1.distanceTo(p2);
+  print(distance);
 }
