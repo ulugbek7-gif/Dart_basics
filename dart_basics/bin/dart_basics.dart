@@ -5,6 +5,8 @@ import 'package:dart_basics/task3.dart';
 import 'package:dart_basics/task4.dart';
 import 'package:dart_basics/task5.dart';
 import 'package:dart_basics/task6.dart';
+import 'package:dart_basics/task7.dart';
+import 'package:dart_basics/task8.dart';
 
 void main() {
   var gcd = DelimetersCalculator();
@@ -42,4 +44,17 @@ void main() {
   var p2 = Point(1, 1, 1);
   double distance = p1.distanceTo(p2);
   print(distance);
+
+  var result = 4.pow(2);
+  print(result);
+
+  var admin = AdminUser('admin@example.com');
+  var user1 = GeneralUser('user1@example.com');
+  var user2 = GeneralUser('user2@example.com');
+
+  var manager = UserManager<User>();
+  manager.addUser(admin);
+  manager.addUser(user1);
+  manager.addUser(user2);
+  manager.printEmails();
 }
