@@ -1,12 +1,4 @@
 extension Root on num {
-  double pow(int n) {
-    double result = 1;
-    for (int i = 0; i < n; i++) {
-      result *= this;
-    }
-    return result;
-  }
-
   double nthRoot(int n) {
     if (n <= 0) {
       throw ArgumentError("The exponent n must be greater than zero.");
@@ -21,13 +13,21 @@ extension Root on num {
     }
 
     double x = this / n;
-    double nx = (n - 1) * x / n + this / (n * pow(n - 1));
+    double nx = (n - 1) * x / n + this / (n * _pow(x, n - 1));
 
     while ((nx - x).abs() > 0.000001) {
       x = nx;
-      nx = (n - 1) * x / n + this / (n * pow(n - 1));
+      nx = (n - 1) * x / n + this / (n * _pow(x, n - 1));
     }
 
     return nx;
+  }
+
+  double _pow(double base, int exponent) {
+    double result = 1;
+    for (int i = 0; i < exponent; i++) {
+      result *= base;
+    }
+    return result;
   }
 }
